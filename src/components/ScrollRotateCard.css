@@ -1,0 +1,23 @@
+.scroll-card {
+  width: 320px;
+  margin: 40px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.scroll-card img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.scroll-card h3 {
+  margin-top: 15px;
+  font-size: 1.4rem;
+  color: #222;
+}

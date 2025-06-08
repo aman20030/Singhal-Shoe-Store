@@ -1,0 +1,59 @@
+.detail-container {
+  padding: 40px;
+  background-color: #f7f7f7;
+  min-height: 90vh;
+}
+
+.detail-card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 900px;
+  margin: auto;
+}
+
+.detail-card img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.detail-info {
+  padding: 25px;
+}
+
+.detail-info h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.price {
+  font-size: 1.5rem;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.description {
+  color: #555;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.add-to-cart-btn {
+  padding: 12px 24px;
+  background-color: #111;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #333;
+}

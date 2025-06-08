@@ -1,16 +1,27 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import ProductList from './pages/ProductList';
-import ProductDetail from './pages/ProductDetail';
-import Login from './pages/Login';
-import Register from './pages/Register';
-import Cart from './pages/Cart';
-import Profile from './pages/Profile';
+import './App.css';
+
+// Pages
+import Home from './pages/Home.jsx';
+import ProductList from './pages/ProductList.jsx';
+import ProductDetail from './pages/ProductDetail.jsx';
+import Login from './pages/Login.jsx';
+import Register from './pages/Register.jsx';
+import Cart from './pages/Cart.jsx';
+import Profile from './pages/Profile.jsx';
+import { CartProvider } from "./context/CartContext";
+// Navbar Component
+import Navbar from './components/Navbar.jsx';
+import Checkout from './pages/Checkout.jsx';
 
 function App() {
   return (
+     <CartProvider>
     <Router>
+      
+      <Navbar /> {/* ✅ Yeh navbar sab pages pe dikhega */}
       <Routes>
+        <Route path="/checkout" element={<Checkout />} />
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<ProductList />} />
         <Route path="/product/:id" element={<ProductDetail />} />
@@ -20,6 +31,8 @@ function App() {
         <Route path="/profile" element={<Profile />} />
       </Routes>
     </Router>
+    </CartProvider>
   );
 }
+
 export default App;
