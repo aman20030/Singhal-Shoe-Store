@@ -1,5 +1,6 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import './Home.css';
+import { fetchData } from "../api/api";
 import { Link } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
@@ -28,6 +29,14 @@ const ScrollCard = ({ img, title, btnText }) => {
 };
 
 const Home = () => {
+  useEffect(() => {
+    fetchData().then((data) => {
+      console.log("✅ API Test Response:", data);
+    }).catch((err) => {
+      console.error("❌ API Call Failed:", err);
+    });
+  }, []);
+
   return (
     <div className="home-container">
       <h1 className="home-title">Welcome to Singhal Shoe Store 👟</h1>
